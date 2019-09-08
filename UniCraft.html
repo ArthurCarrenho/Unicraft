@@ -1,0 +1,99 @@
+<html>
+<title>UniCraft</title>
+ <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/> 
+ <style>
+body {
+  background-image: url("https://www.thomasvdbulk.nl/minecraft/background5.png"); 
+  background-position: center; 
+  background-size: cover; 
+}
+span.textbox {
+	    background-color: #FFF;
+	    color: #888;
+	    line-height:20px;
+	    height:20px;
+	    padding:3px;
+	    border:1px #888 solid;
+	    font-size:9pt;
+}
+    
+span.textbox input {
+      border: 0px;
+	    background-color: #FFF;
+  }
+.gameframe {
+	margin: 100px auto;
+    position: absolute;
+    width: 75%;
+    transform:translateX(-50%);
+    min-width:320px;
+    min-height:240px;
+    max-width:800px;
+    max-height:600px;
+    height: 90%;
+    top:0;
+}
+
+.button {
+  height: 40px;
+  width: 400px;
+  outline: 2px solid black;
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  background-image: url('https://i.imgur.com/Q68Hcoa.png');
+  background-repeat: repeat;
+  padding: 0;
+  font-family: MinecraftiaRegular;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px #4C4C4C;
+  border-bottom: 4px solid #565656;
+  border-right: 2px solid #565656;
+  border-left: 2px solid #AAA;
+  border-top: 2px solid #AAA;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.button span {
+  position: relative;
+  line-height: 40px;
+  bottom: 3px;
+}
+
+.button:hover {
+  border-bottom: 4px solid #59639A;
+  border-right: 2px solid #59639A;
+  border-left: 2px solid #BDC6FF;
+  border-top: 2px solid #BDC6FF;
+  background-image: url('https://i.imgur.com/wTcCQmT.png');
+  color: #FFFFA0;
+}
+ </style>
+ <body>
+ <!-- by Arthur Carrenho --->
+<center>
+	<form>
+        <span class="textbox"> 
+        https://classic.minecraft.net/?join= <input type="text" id="url" /> </span>
+	</form>
+	<div class="button" onclick="loadUrl()">
+    <span>Enter Multiplayer</span>
+	</div>
+	<div class="button" onclick="document.getElementById('showUrl').requestFullscreen();">
+    <span>Fullscreen</span>
+	</div>
+	<br>	
+	<iframe src="https://classic.minecraft.net" id="showUrl" class="gameframe" allowfullscreen='true' frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+</center>
+<script type="text/javascript">
+	function loadUrl() {
+    var url = document.getElementById( 'url' ).value;
+    var url1 = 'https://classic.minecraft.net/?join=' + url 
+    var showUrl = document.getElementById( 'showUrl' );
+    showUrl.src = url1;
+}
+</script>
+</body>
+</html>

